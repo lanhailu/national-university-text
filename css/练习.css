@@ -1,0 +1,79 @@
+body{
+	
+}
+* {
+	margin:0;
+	padding:0;
+}
+#top{
+	height: 150px;
+	width: 100%;
+	/*background: skyblue;*/
+	background: url(../imger/download.png) repeat-x;
+}
+.tu{
+	margin-left: 100px;
+	/*margin-top: 8px;*/
+}
+.leftTop a{
+	text-decoration: none;
+	color: white;
+}
+.ul1{
+	margin-left: 1000px;
+	margin-top: -37px;
+}
+.li1{
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+}
+.li2{
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+}
+.li2 a{
+	font: "微软雅黑";
+	font-size: 16px;
+	margin-left: 10px;
+}
+.ul2{
+	margin-left: 1000px;
+}
+.menu{
+	display: none;
+}
+
+/*/banner部分/*/
+#banner {
+	list-style: none;
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	z-index: 999;
+	margin-top: -600px;
+}
+#pic{
+	width: 100%;
+	position: relative;
+}
+#prev{
+	left: 100px;
+	background: url(../imger/11.png) no-repeat left center;
+}
+#next{
+	right: 100px;
+	background: url(../imger/12.png) no-repeat right center;
+}
+.arrow{
+	cursor: pointer;
+	display: none;
+	line-height: 58px;
+	text-align: center;
+	width: 58px;
+	height: 58px;
+	position: absolute;
+	z-index: 2;
+}
