@@ -1,0 +1,67 @@
+<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script type="text/javascript">
+			/*var ul2 = document.getElementById("ul2");
+	        var liNodes = ul2.getElementsByClassName("li2");
+	        for(var i = 0;i<liNodes.length;i++){
+		    liNodes[i].onmouseover = function(){
+			this.getElementsByTagName("ul")[0].style.display = "block";
+		}
+		    liNodes[i].onmouseout = function(){
+			this.getElementsByTagName("ul")[0].style.display = "none"; 
+		}
+	    }*/js
+        $("#bbstab a").mouseover(function() {
+		$(".now").removeClass("now");
+		$(this).addClass("now");
+		var index = $("#bbstab a").index($(this));
+		$(".menu").css("display", "none");
+		$(".menu:eq("+ index +")").css("display", "block");
+	    })
+		</script>
+		
+
+/*中间小轮播*/
+		<script type="text/javascript">
+			var banList = [
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/01.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/02.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/03.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/04.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/05.jpg",
+            },
+        ]
+			var index = 0;
+            var link = document.getElementById("link");
+            var bannerimger = document.getElementById("imger");
+            function changeImg (){
+      	    if(index == 4){
+      		   index = 0;
+      	   }
+      	    else{
+      		  index = index + 1;
+      	   }
+      	    link.href = banList[index].linksrc;
+      	    bannerimger.src = banList[index].imgsrc;
+           }
+            var intervalId = setInterval(changeImg,3000);
+            bannerimger.onmouseover = function(){
+      	    clearInterval(intervalId);
+           }
+           bannerimger.onmouseout = function(){
+      	   intervalId = setInterval(changeImg,3000);
+          }
+		</script>

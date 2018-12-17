@@ -1,0 +1,278 @@
+body{
+	
+}
+* {
+	margin:0;
+	padding:0;
+}
+#top{
+	height: 150px;
+	width: 100%;
+	/*background: skyblue;*/
+	background: url(../imger/download.png) repeat-x;
+}
+.tu{
+	margin-left: 150px;
+	margin-top: 12px;
+	/*margin-top: 8px;*/
+}
+.leftTop a{
+	text-decoration: none;
+	color: white;
+	font-size: 17px;
+}
+.ul1{
+	margin-left: 910px;
+	margin-top: -55px;
+}
+.seach{
+	width: 38px;
+	height: 38px;
+	background-color: white;
+	margin-top: -12px;
+}
+.logo{
+	margin-top: 20px;
+	margin-left: 350px;
+}
+.li1{
+	list-style: none;
+	float: left;
+	margin-left: 3px;
+}
+.li a{
+	margin-left: 0px;
+}
+.li2{
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+}
+.li2 a{
+	font-size: 18px;
+	margin-left: 40px;
+}
+.ul2{
+	margin-left: 500px;
+	margin-top: 40px;
+}
+.menu{
+	display: none;
+}
+.menu a:hover{
+	color: red;
+}
+
+/*/banner部分/*/
+#banner {
+	list-style: none;
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	z-index: 999;
+	margin-top: -30px;
+}
+#pic{
+	width: 100%;
+	position: relative;
+}
+#prev{
+	left: 100px;
+	background: url(../imger/11.png) no-repeat left center;
+}
+#next{
+	right: 100px;
+	background: url(../imger/12.png) no-repeat right center;
+}
+.arrow{
+	cursor: pointer;
+	display: none;
+	line-height: 58px;
+	text-align: center;
+	width: 58px;
+	height: 58px;
+	position: absolute;
+	z-index: 2;
+}
+/*
+ * 大轮播图往下
+ * 
+ */
+.top2{
+	margin-left: 151px;
+	margin-top: 10px;
+}
+.img3{
+	list-style: none;
+	height: 75px;
+	width: 75px;
+	margin-top: 0px;
+}
+.db{
+	width: 170px;
+	height: 75px;
+	float: left;
+	margin-left: 5px;
+	background: gray;
+	border-radius: 5px;
+}
+.db a{
+	color: white;
+	font-size: 20px;
+	margin-left: 0px;
+	margin-top: -20px;
+}
+
+.db1{
+	width: 170px;
+	height: 75px;
+	float: left;
+	background: whitesmoke;
+	border-radius: 5px;
+}
+.db1 a{
+	color: black;
+	font-size: 20px;
+}
+.db2{
+	float: left;
+	width: 400px;
+	height: 75px;
+	background: ;
+	margin-left: 300px;
+}
+.a1{
+	font-size: 20px;
+	margin-left: 12px;
+	font-weight: bold;
+}
+.a2{
+	font-size: 18px;
+	margin-left: -23px;
+	color: #017edc;
+	font-weight: bold;
+}
+
+/*小轮播新闻部分*/
+.left{
+	width: 428px;
+	height: 315px;
+	margin-left: 150px;
+	overflow: hidden;
+	position: relative;
+	z-index: 9;
+}
+.left1{
+	width: 428px;
+	height: 315px;
+}
+.hd a{
+	display: block;
+	float: left;
+	margin: 0 6px;
+	background: url(../imger/banner.png) no-repeat -16px 0;
+	width: 160px;
+	height: 160px;
+}
+.hd a.active{
+	background-position: 0 0;
+}
+.center{
+	width: 365px;
+	height: 315px;
+	margin-top: -315px;
+	margin-left: 578px;
+	position: relative;
+	/*background: #808080;*/
+}
+.font{
+	float: left;
+	margin-left: 6px;
+	font-size: 12px;
+	color: red;
+}
+#middle{
+	width: 33px;
+	height: 315px;
+	background-color: yellowgreen;
+	margin-left: 938px;
+	margin-top: -315px;
+}
+#big{
+	width: 28px;
+	height: 315px;
+}
+.right{
+	width: 400px;
+	height: 315px;
+	margin-top: -315px;
+	margin-left: 971px;
+	background-color: gold;
+}
+#hengfu{
+	width: 1200px;
+	height: 188px;
+	margin-top: 10px;
+	margin-left: 150px;
+}
+#gif{
+	width: 1221px;
+	
+}
+/*三个小图*/
+.san{
+	padding-left: 150px;
+	margin-top: 25px;
+}
+#san{
+	width: 403px;
+	height: 100px;
+}
+
+/*<!--四个中间框的第一个-->*/
+.border1{
+	width: 595px;
+	height: 200px;
+	margin-top: 30px;
+	margin-left: 150px;
+	background-color: lawngreen;
+}
+.border2{
+	width: 595px;
+	height: 200px;
+	margin-top: -200px;
+	margin-left: 775px;
+	background-color: darkcyan;
+}
+.border3{
+	width: 595px;
+	height: 200px;
+	margin-top: 30px;
+	margin-left: 150px;
+	background-color: aqua;
+}
+.border4{
+	width: 595px;
+	height: 200px;
+	margin-top: -200px;
+	margin-left: 775px;
+	background-color: grey;
+}
+/*信箱*/
+.photo{
+	clear: both;
+	width: 1220px;
+	height: 179px;
+	margin-top: 25px;
+	margin-left: 150px;
+	background: #cdd0d4;
+}
+#photos1{
+	margin-left: 0px;
+	margin-top: 30px;
+}
+#photos{
+	margin-left: 12.6px;
+	margin-top: 30px;
+}

@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="css/练习.css" />
+		<link rel="stylesheet" href="css/text.css" />
+		<link rel="stylesheet" href="css/zero.css" />
 	</head>
 	<body>
 		<div id="top">
@@ -15,11 +16,11 @@
 					<li class="li1"><a href="##">教职工 &nbsp;|</a></li>
 					<li class="li1"><a href="##">校友 &nbsp;|</a></li>
 					<li class="li1"><a href="##">English &nbsp;|</a></li>
-					<li class="li1"><img src="imger/seach.png"></li>
+					<li class="li1"><img class="seach" src="imger/seach.png"></li>
 				</ul><br />
-				<ul class="ul2">
+				<ul class="ul2" id="bbstab">
 					<li class="li2">
-						<a href="##">学院简介</a>
+						<a href="##" class="now">学院简介</a>
 						<div class="menu">
 							<dl>
 								<dd><a href="##">学院简介</a></dd>
@@ -117,6 +118,8 @@
 				</ul>
 			</div>
 		</div>
+		<!--二级菜单-->
+		
 		<div id="banner" >
 			<div id="pic" style="height: 500px;">
 				<ul>
@@ -200,14 +203,14 @@
             {
       	    "linksrc":"http://sina.com",
       	    "imgsrc":"imger/10.jpg",
-            },
+            }, 
       ]
       
       var index = 0;
       var links = document.getElementById("links");
       var bannerimg = document.getElementById("img");
       function changeImg (){
-      	if(index == 3){
+      	if(index == 9){
       		index = 0;
       	}
       	else{
@@ -224,5 +227,101 @@
       	intervalId = setInterval(changeImg,3000);
       }
 		</script>
+		
+		<!--中间新闻部分-->
+		<div class="logo2">
+			<div class="top2">
+				<div class="db1"><a><img class="img3" src="imger/pic_fun_xyxw.gif"/>学院新闻</a></div>
+				<div class="db"><a><img class="img3" src="imger/pic_fun_xbxw.gif"/>系部新闻</a></div>
+				<div class="db"><a><img class="img3" src="imger/pic_fun_mtgz.gif"/>媒体关注</a></div>
+				<div class="db2"><img class="img3" src="imger/qqq.png"/><a class="a1">通知公告&nbsp;&nbsp;</a><a class="a2">Announcements</a></div>
+			</div>
+			<div class="left">
+				<!--小轮播-->
+				<ul>
+				<li><a id="link"><img src="imger/03.jpg" class="left1" id="imger"><p>我院隆重举行民族团结进步“五个一”教...</p></a></li>
+				<li><a><img src="imger/02.jpg" class="left1"><p>我院举办的国际视野下TESOL理论与实践研...</p></a></li>
+				<li><a><img src="imger/01.jpg" class="left1"><p>我院武鸣新校区建设项目奠基开工仪式隆...</p></a></li>
+				<li><a><img src="imger/05.jpg" class="left1"><p>我院教师参加学校召开贯彻全国教育大会...</p></a></li>
+				<li><a><img src="imger/04.jpg" class="left1"><p>我院党委召开机关党员学习会</p></a></li>
+				<div class="hd">
+				<a href="" class=""></a>
+				<a href="" class=""></a>
+				<a href="" class=""></a>
+				<a href="" class=""></a>
+				<a href="" class="active"></a>
+				</div>
+				</ul>
+			</div>
+			<!--<td width="48%" valign="top" align="left">
+				<div><h3>12-13</h3><a>管理系党支部书记参加广西民族大学2018党支部书...</a></div>
+			</td>-->
+			<!--中间新闻-->
+			<div class="center">
+				<ul>
+					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li>
+				</ul>
+			</div>
+			
+			<!--中间小箭头-->
+			<div id="middle">
+			<a><img src="imger/pic_fun_m1.png" id="big"></a>
+			</div>
+			
+			<!--右边新闻-->
+			<div class="right">
+				<ul>
+					<li><h3>11-06</h3><a>管理系党支部书记参加广西民族大学2018党支部书...</a></li>
+				</ul>
+			</div>
+			
+			<!--中间横幅-->
+			<div id="hengfu">
+				<a><img src="imger/1200.gif" id="gif"></a>
+			</div>
+			
+			<!--三个小图-->
+			<div class="san">
+				<a><img src="imger/hengfu1.png" id="san"/></a>
+				<a><img src="imger/hengfu2.png" id="san"/></a>
+				<a><img src="imger/hengfu3.png" id="san"/></a>
+			</div>
+			
+			<!--四个中间框的第一个-->
+			<div class="border1">
+				
+			</div>
+			
+			<!--四个中间框的第2个-->
+			<div class="border2">
+				
+			</div>
+			
+			<!--四个中间框的第3个-->
+			<div class="border3">
+				
+			</div>
+			
+			<!--四个中间框的第4个-->
+			<div class="border4">
+				
+			</div>
+		</div>
+		
+		<!--信箱-->
+		<div class="photo">
+		<div>
+		<a><img src="imger/bot_01.png" id="photos1"></a>
+		<a><img src="imger/bot_02.png" id="photos"></a>
+		<a><img src="imger/bot_03.png" id="photos"></a>
+		<a><img src="imger/bot_04.png" id="photos"></a>
+		<a><img src="imger/bot_05.png" id="photos"></a>
+		<a><img src="imger/bot_06.png" id="photos"></a>
+		<a><img src="imger/bot_07.png" id="photos"></a>
+		<a><img src="imger/bot_08.png" id="photos"></a>
+		<a><img src="imger/bot_09.png" id="photos"></a>
+		</div>
+		</div>
 	</body>
 </html>
+
