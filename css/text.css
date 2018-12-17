@@ -1,5 +1,5 @@
 body{
-	
+	background-color: #efefef;
 }
 * {
 	margin:0;
@@ -179,24 +179,29 @@ body{
 	background-position: 0 0;
 }
 .center{
-	width: 365px;
+	width: 375px;
 	height: 315px;
-	margin-top: -315px;
+	margin-top: -300px;
 	margin-left: 578px;
 	position: relative;
 	/*background: #808080;*/
 }
 .font{
 	float: left;
-	margin-left: 6px;
-	font-size: 12px;
+	margin-left: 45px;
+	margin-top: -15px;
+	font-size: 13px;
+	color: black;
+}
+.font:hover{
 	color: red;
+	text-decoration: none;
 }
 #middle{
 	width: 33px;
 	height: 315px;
-	background-color: yellowgreen;
-	margin-left: 938px;
+	/*background-color: yellowgreen;*/
+	margin-left: 943px;
 	margin-top: -315px;
 }
 #big{
@@ -206,9 +211,20 @@ body{
 .right{
 	width: 400px;
 	height: 315px;
-	margin-top: -315px;
+	margin-top: -325px;
 	margin-left: 971px;
 	background-color: gold;
+}
+.font2{
+	float: left;
+	margin-left: 45px;
+	margin-top: -15px;
+	font-size: 13px;
+	color: black;
+}
+.font2:hover{
+	color: red;
+	text-decoration: none;
 }
 #hengfu{
 	width: 1200px;
@@ -238,6 +254,32 @@ body{
 	margin-left: 150px;
 	background-color: lawngreen;
 }
+.bordera1{
+	font-size: 30px;
+	font-family: "微软雅黑";
+	color: white;
+	line-height: 80px;
+	margin-left: 40px;
+	margin-top: 40px;
+}
+.bordera2{
+	font-size: 17px;
+	color: white;
+	font-weight: bold;
+	margin-top: -20px;
+    margin-left: 40px;
+    line-height: 5px;
+}
+.bordera3{
+	font-size: 13px;
+	color: white;
+	margin-left: 140px;
+	line-height: 120px;
+}
+.bordera3:hover{
+	font-weight: bold;
+	text-decoration: underline;
+}
 .border2{
 	width: 595px;
 	height: 200px;
@@ -262,17 +304,106 @@ body{
 /*信箱*/
 .photo{
 	clear: both;
-	width: 1220px;
-	height: 179px;
+	width:100%;
+	height: 170px;
 	margin-top: 25px;
-	margin-left: 150px;
+	margin-left: 0px;
 	background: #cdd0d4;
 }
-#photos1{
-	margin-left: 0px;
+.a{
+	margin-right: 19px;
+	width:119px;
+	height: 120px;
+	float: left;
+}
+.phototab{
+	margin-left: 150px;
+	
+}
+/*#photo1{
+	margin-left: 150px;
+}*/
+.a a{
+	text-align: center;
+}
+.a h2{
+	margin-top: -25px;
+	color: white;
+}
+.picture img{
 	margin-top: 30px;
 }
+
+/*#photos1{
+	margin-left: 150px;
+	margin-top: 35px;
+}*/
 #photos{
 	margin-left: 12.6px;
+	margin-top: 35px;
+}
+
+/*底部*/
+.bottom{
+	width: 100%;
+	height: 208px;
+	background: #325e92;
+}
+.weixin{
+	float: left;
+	margin: 35px 5px 0 5px;
+	text-align: center;
+	margin-left: 150px;
+}
+.weibo{
+	float: left;
+	margin: 35px 5px 0 5px;
+	text-align: center;
+	margin-left: 0px;
+}
+.vr{
+	float: left;
+	margin: 35px 5px 0 5px;
+	text-align: center;
+	margin-left: 0px;
+}
+.w{
+	font-size: 11px;
+	font-style: normal;
+	color: #CCC;
+}
+.middle{
+	float: left;
 	margin-top: 30px;
+	margin-right: 10px;
+	margin-bottom: 0;
+	margin-left: 10px;
+}
+.middle h3{
+	margin-top: 5px;
+	color: white;
+	line-height: 20px;
+	font-size: 11px;
+	font-family: "微软雅黑";
+}
+/*最右*/
+.you select{
+	width: 200px;
+	height: 35px;
+	margin-top: 37px;
+	margin-left: 180px;
+	text-align: center;
+	line-height: 30px;
+}
+.aa{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #222222;
+	line-height: 30px;
+}
+.you1 select{
+	width: 200px;
+	height: 35px;
+	margin-top: 20px;
+	margin-left: 180px;
 }
