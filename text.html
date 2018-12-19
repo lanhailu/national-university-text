@@ -11,16 +11,16 @@
 			<img src="imger/logo.png" class="tu"/>
 			<div class="leftTop">
 				<ul class="ul1">
-					<li class="li1"><a href="##">首页 &nbsp;|</a></li>
-					<li class="li1"><a href="##">学生 &nbsp;|</a></li>
-					<li class="li1"><a href="##">教职工 &nbsp;|</a></li>
-					<li class="li1"><a href="##">校友 &nbsp;|</a></li>
-					<li class="li1"><a href="##">English &nbsp;|</a></li>
-					<li class="li1"><img class="seach" src="imger/seach.png"></li>
+					<li class="li1"><a href="##">首页  &nbsp;</a><span style="color: white; font-size: 16px;">|</span></li>
+					<li class="li1"><a href="##"> &nbsp;学生  &nbsp;</a><span style="color: white; font-size: 16px;">|</span></li>
+					<li class="li1"><a href="##"> &nbsp;教职工 &nbsp;</a><span style="color: white; font-size: 16px;">|</span></li>
+					<li class="li1"><a href="##"> &nbsp;校友 &nbsp;</a><span style="color: white; font-size: 16px;">|</span></li>
+					<li class="li1"><a href="##"> &nbsp;English &nbsp;</a></li>
+					<li class="li1"><div class="qing" style="display: none;"><a>请输入</a></div><img class="seach" src="imger/seach.png"></li>
 				</ul><br />
-				<ul class="ul2" id="bbstab">
+				<div class="ul2" id="bbstab">
 					<li class="li2">
-						<a href="##" class="now">学院简介</a>
+						<a href="##" class="now">学院概括</a>
 						<div class="menu">
 							<dl>
 								<dd><a href="##">学院简介</a></dd>
@@ -115,9 +115,31 @@
 							</dl>
 						</div>
 					</li>
-				</ul>
+				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<!--<script type="text/javascript" src="js/text.js" ></script>-->
+		<script type="text/javascript">
+			$(function() {
+				hide(); /*DOM元素加载完就执行隐藏函数*/
+			});
+
+			function hide() {
+				$(".menu").css("display", "none"); /*隐藏函数，就是将二级菜单隐藏*/
+			}
+			/*以下是第二部分*/
+			$(".ul2 li").mouseenter(
+				function() {
+					$(this).find(".menu").css("display", "block"); /*鼠标移动到.t1 li上就执行显示函数*/
+				}
+			);
+			$(".ul2 li").mouseleave(
+				function() {
+					hide(); /*鼠标离开后又隐藏*/
+				}
+			);
+		</script>
 		<!--二级菜单-->
 		
 		<div id="banner" >
@@ -136,6 +158,11 @@
 				</ul>
 				<a id="prev" class="arrow" style="top: 231px;"></a>
 				<a id="next" class="arrow" style="top: 231px;"></a>
+			</div>
+			<div class="icon">
+				<li><a class="icon1" href="##"><img src="imger/xin.png"></a></li>
+				<li><a class="icon2" href="##"><img src="imger/ban.png"></a></li>
+				<li><a class="icon3" href="##"><img src="imger/wei.png"></a></li>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -238,13 +265,25 @@
 			</div>
 			<div class="left">
 				<!--小轮播-->
-				<ul>
-				<li><a id="link"><img src="imger/03.jpg" class="left1" id="imger"><p>我院隆重举行民族团结进步“五个一”教...</p></a></li>
-				<li><a><img src="imger/02.jpg" class="left1"><p>我院举办的国际视野下TESOL理论与实践研...</p></a></li>
-				<li><a><img src="imger/01.jpg" class="left1"><p>我院武鸣新校区建设项目奠基开工仪式隆...</p></a></li>
-				<li><a><img src="imger/05.jpg" class="left1"><p>我院教师参加学校召开贯彻全国教育大会...</p></a></li>
-				<li><a><img src="imger/04.jpg" class="left1"><p>我院党委召开机关党员学习会</p></a></li>
+				<ul id="ul">
+				<li><a id="link"><img src="imger/03.jpg" class="left1" id="tupian">
+                <div id="title"><p>我院隆重举行民族团结进步“五个一”教...</p></div>
+				</a></li>
+				<li><a><img src="imger/02.jpg" class="left1" style="display: none;">					
+				<!--<div id="title"><p>我院举办的国际视野下TESOL理论与实践研...</p></div>-->
+				</a></li>
+				<li><a><img src="imger/01.jpg" class="left1" style="display: none;">
+			    <!--<div id="title"><p>我院武鸣新校区建设项目奠基开工仪式隆...</p></div>-->
+				</a></li>
+				<li><a><img src="imger/05.jpg" class="left1" style="display: none;">
+				<!--<div id="title"><p>我院教师参加学校召开贯彻全国教育大会...</p></div>-->
+				</a></li>
+				<li><a><img src="imger/04.jpg" class="left1" style="display: none;">
+				<!--<div id="title"><p>我院党委召开机关党员学习会</p></div>-->
+				</a></li>
+				
 				<div class="hd">
+					<!--小白点-->
 				<a href="" class=""></a>
 				<a href="" class=""></a>
 				<a href="" class=""></a>
@@ -253,53 +292,116 @@
 				</div>
 				</ul>
 			</div>
-			<!--<td width="48%" valign="top" align="left">
-				<div><h3>12-13</h3><a>管理系党支部书记参加广西民族大学2018党支部书...</a></div>
-			</td>-->
+			<script type="text/javascript">
+				var blist = [
+	            {
+		         newstitle: "我院隆重举行民族团结进步“五个一”教...",
+		         linkhref: "http://baidu.com",
+      	         imgsrc:"imger/03.jpg",
+		
+	            },
+	            {
+		        newstitle: "我院举办的国际视野下TESOL理论与实践研...",
+		        linkhref: "http://baidu.com",
+		        imgsrc:"imger/02.jpg",
+	            },
+	            {
+		        newstitle: "我院武鸣新校区建设项目奠基开工仪式隆...",
+		        linkhref: "http://baidu.com",
+		        imgsrc:"imger/01.jpg",
+	            },
+	            {
+	           	newstitle: "我院教师参加学校召开贯彻全国教育大会...",
+		        linkhref: "http://baidu.com",
+      	        imgsrc:"imger/05.jpg",
+		
+	            },
+	            {
+		        newstitle: "我院党委召开机关党员学习会",
+		        linkhref: "http://baidu.com",
+      	        imgsrc:"imger/04.jpg",
+		
+	            },
+                ]
+				var link = document.getElementById("link");
+				var tupian = document.getElementById("tupian");
+				var title =  document.getElementById("title"); 
+				var hb = document.getElementById("hb");
+				var a = document.getElementsByTagName("a")
+				
+				var indexs = 0;
+				function changeImgs (){
+      	        if(indexs == 4){
+      		    indexs = 0;
+      	        }
+      	        else{
+      		    indexs = indexs + 1;
+      	        }
+      	        link.href = blist[indexs].linkhref;
+      	        tupian.src = blist[indexs].imgsrc;
+      	        title.innerHTML = blist[indexs].newstitle;
+      	        for(var i = 0; i < a.length; i++) {
+        	    if(i == indexs) {
+        		hb[i].className = "active";
+        	    }
+        	    else {
+                hb[i].className = "";
+        	    }
+              }
+            }
+                var intervalId = setInterval(changeImgs,3000);
+                tupian.onmouseover = function(){
+      	        clearInterval(intervalId);
+                }
+                tupian.onmouseout = function(){
+      	        intervalId = setInterval(changeImgs,3000);
+                }
+				
+			</script>
 			<!--中间新闻-->
 			<div class="center">
+				<!--学院新闻-->
 				<ul>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
+					<li><h3>12-17</h3><a class="font">学院及教学检查团赴泰国检查我院留学生..</a></li></br>
+					<li><h3>12-13</h3><a class="font">泰国商会大学代表团来访我院</a></li></br>
+					<li><h3>12-13</h3><a class="font">我院召开武鸣新校区总平及单体设计方案评审会</a></li></br>
+					<li><h3>12-13</h3><a class="font">学院召开<大庆归来话感受>座谈会</a></li></br>
+					<li><h3>12-13</h3><a class="font">学院党委召开新任中层正职干部任前集体谈话会</a></li></br>
+					<li><h3>12-13</h3><a class="font">我院2000名女生圆满完成区庆演出任务载誉归来</a></li></br>
+					<li><h3>12-13</h3><a class="font">我院法学系“12.4“宪法日活动开幕</a></li></br>
+					<li><h3>12-13</h3><a class="font">我院艺术设计系举行向学院赠画仪式</a></li></br>
+					<li><h3>12-13</h3><a class="font">越共中央组织部165计划办公室副主任...</a></li></br>
+					<li><h3>12-13</h3><a class="font">我院隆重举行民族团结进步”五个一“...</a></li></br>
 				</ul>
 			</div>
 			<div class="center1" style="display: none;">
+				<!--系部新闻-->
 				<ul>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
+					<li><h3>12-13</h3><a class="font">海虑太教授应邀给我院新闻信息中心记者作新闻写...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【党总支活动】文化传播系全体党员大会顺利举行</a></li></br>
+					<li><h3>12-13</h3><a class="font">【党团建设】管理系党支部书记参加广西民族大学2...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【党团建设】管理系2018年下半年党员发展对象党...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【教学工作】管理系开展“自治区60周年大庆”节...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【教学活动】管理系举办英语四级模拟考试"</a></li></br>
+					<li><h3>12-13</h3><a class="font">【学干培训】管理系学生会新闻部开展学干培训会"</a></li></br>
+					<li><h3>12-13</h3><a class="font">【教学活动】管理系2018级安全教育班会</a></li></br>
+					<li><h3>12-13</h3><a class="font">【学生活动】管理系2018年第二届“活力杯”篮球..</a></li></br>
+					<li><h3>12-13</h3><a class="font">【实践教学】管理系承办国际视野下TESOL教学与实...</a></li></br>
 				</ul>
 			</div>
 			<div class="center1" style="display: none;">
+				<!--媒体关注-->
 				<ul>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
+					<li><h3>12-13</h3><a class="font">广西民大相思湖学院：海外师生心向党</a></li></br>
+					<li><h3>12-13</h3><a class="font">校企携手共育大数据人才</a></li></br>
+					<li><h3>12-13</h3><a class="font">甲骨文校企合作助力高校应用转型发展校长论坛举行</a></li></br>
+					<li><h3>12-13</h3><a class="font">《圆梦中国 德耀中华》专题节目在广西高校引强烈...</a></li></br>
+					<li><h3>12-13</h3><a class="font">校企携手共育大数据人才</a></li></br>
+					<li><h3>12-13</h3><a class="font">在海外讲好相思湖故事</a></li></br>
+					<li><h3>12-13</h3><a class="font">甲骨文校企合作助力高校应用转型发展校长论坛举行</a></li></br>
+					<li><h3>12-13</h3><a class="font">校企携手共育大数据人才</a></li></br>
+					<li><h3>12-13</h3><a class="font">脱“影”而出 唱响改革强校之歌</a></li></br>
+					<li><h3>12-13</h3><a class="font">广西民族大学相思湖学院校刊校报(2017年第一期)</a></li></br>
 				</ul>
 			</div>
 			
@@ -310,19 +412,56 @@
 			
 			<!--右边新闻-->
 			<div class="right">
+			  <div id="demo">
+				<div id="demo1">
 				<ul>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
-					<li><h3>12-13</h3><a class="font2">管理系党支部书记参加广西民族大学2018党支部书...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于2018年9月全国计算机等级考试领取...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">广西民族大学相思湖学院文化传播系专...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于2019年3月全国计算机等级考试报名...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于做好庆祝自治区成立 60 周年放假...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">广西民族大学相思湖学院中、初级职称...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">2018年度广西民族大学相思湖学院职称...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于开展广西民族大学相思湖学院“黄...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于修（制）订2019级本科专业人才培...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">广西民族大学相思湖学院管理系专任教...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">广西民族大学相思湖学院计算机科学与...</a></li></br>
 				</ul>
+			  </div>
+			  
+			  <div id="demo2" <!--style="display: none;"-->>
+				<ul>
+					<li><h3>12-13</h3><a class="font2">关于2018年9月全国计算机等级考试领取...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">广西民族大学相思湖学院文化传播系专...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于2019年3月全国计算机等级考试报名...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于做好庆祝自治区成立 60 周年放假...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">广西民族大学相思湖学院中、初级职称...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">2018年度广西民族大学相思湖学院职称...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于开展广西民族大学相思湖学院“黄...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">关于修（制）订2019级本科专业人才培...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">广西民族大学相思湖学院管理系专任教...</a></li></br>
+					<li><h3>12-13</h3><a class="font2">广西民族大学相思湖学院计算机科学与...</a></li></br>
+				</ul>
+			  </div>
+			 </div>
 			</div>
+			
+			<script type="text/javascript">
+	            var speed=80;
+	         	var FGDemo = document.getElementById("demo");
+	         	var FGDemo1 = document.getElementById("demo1");
+	         	var FGDemo2 = document.getElementById("demo2");
+	            FGDemo2.innerHTML = FGDemo1.innerHTML
+	         	     function Marquee1(){
+	         	    	 if(FGDemo2.offsetHeight-FGDemo.scrollTop<=0){
+	         	    		FGDemo.scrollTop-=FGDemo1.offsetHeight
+	         	    	 }else{
+	         	    		FGDemo.scrollTop++
+	         	    	    }
+	         	    	}
+	         	    	var MyMar1 = setInterval(Marquee1,speed)
+	         	    	FGDemo.onmouseover = function(){clearInterval(MyMar1)}
+	         	    	FGDemo.onmouseout = function(){MyMar1=setInterval(Marquee1,speed)}
+	         	    </script>
 			
 			<!--中间横幅-->
 			<div id="hengfu">
@@ -338,22 +477,107 @@
 			
 			<!--四个中间框的第一个-->
 			<div class="border1">
-				<a class="bordera1">采购公告</a></br><a class="bordera2">Announcements</a></br><a class="bordera3" href="###">更多...</a>
+				<a class="bordera1">采购公告</a>
+				</br>
+				<a class="bordera2">Announcements</a>
+				</br>
+				<a class="bordera3" href="###">更多...</a>
+				<div id="new1">
+					<div id="day">
+						<div id="day1"><h3>12-17</h3></div>
+						<a>【采购公告】高清电子显示屏采购及安装项目</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>12-05</h3></div>
+						<a>【采购公告】笔记本电脑采购及安装项目</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>12-04</h3></div>
+						<a>【采购公告】空调采购及安装项目</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>12-03</h3></div>
+						<a>【成交公告】云桌面实训设备（含软件）采...</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>12-17</h3></div>
+						<a>【成交公告】学院监控系统采购及安装项目</a>
+					</div>
+				</div>
 			</div>
 			
 			<!--四个中间框的第2个-->
 			<div class="border2">
-				<a class="bordera1">采购公告</a></br><a class="bordera2">Announcements</a></br><a class="bordera3" href="###">更多...</a>
+				<a class="bordera1">校园文化</a></br>
+				<a class="bordera2">Campus culture</a></br>
+				<a class="bordera3" href="###">更多...</a>
+				<div id="new1">
+					<div id="day">
+						<div id="day1"><h3>06-28</h3></div>
+						<a>诗酒趁年华 莫负好春色</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>04-26</h3></div>
+						<a>绿色护航 ，载梦前行</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>11-01</h3></div>
+						<a>外国语言文学系开展“Introduction...</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>06-28</h3></div>
+						<a>风雨砥砺，高歌前行——访研究生陶儒评</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>06-25</h3></div>
+						<a>【新闻信息中心】——“尚学杯”气排球赛</a>
+					</div>
+				</div>
 			</div>
 			
 			<!--四个中间框的第3个-->
 			<div class="border3">
-				<a class="bordera1">采购公告</a></br><a class="bordera2">Announcements</a></br><a class="bordera3" href="###">更多...</a>
+				<a class="bordera1">学术动态</a></br>
+				<a class="bordera2">Academic trends</a></br>
+				<a class="bordera3" href="###">更多...</a>
+				<div id="new1">
+					<div id="day">
+						<div id="day1"><h3>10-31</h3></div>
+						<a>马来西亚吉隆坡建设大学代表团来访我院...</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>10-12</h3></div>
+						<a>广西教育研究院院长旷乾教授莅临我院作...</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>06-19</h3></div>
+						<a>曾令辉教授给我院教职员工作“新时代教育...</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>06-15</h3></div>
+						<a>杨勇教授给我院师生作学习贯彻习总书记...</a>
+					</div>
+					<div id="day">
+						<div id="day1"><h3>05-18</h3></div>
+						<a>美国驻北京大使馆代表团来访我院并给...</a>
+					</div>
+				</div>
 			</div>
 			
 			<!--四个中间框的第4个-->
 			<div class="border4">
-				<a class="bordera1">采购公告</a></br><a class="bordera2">Announcements</a></br><a class="bordera3" href="###">更多...</a>
+				<a><img src="imger/daohang01.png"></a>
+				<a><img src="imger/daohang02.png"></a>
+				<a><img src="imger/daohang03.png"></a>
+				<a><img src="imger/daohang04.png"></a>
+				<a><img src="imger/daohang05.png"></a>
+				<a><img src="imger/daohang06.png"></a>
+				<a><img src="imger/daohang07.png"></a>
+				<a><img src="imger/daohang08.png"></a>
+				<a><img src="imger/daohang09.png"></a>
+				<a><img src="imger/daohang100.png"></a>
+				<a><img src="imger/daohang11.png"></a>
+				<a><img src="imger/daohang120.png"></a>
 			</div>
 		</div>
 		
