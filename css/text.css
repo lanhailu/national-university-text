@@ -22,7 +22,7 @@ body{
 	font-size: 17px;
 }
 .ul1{
-	margin-left: 910px;
+	margin-left: 860px;
 	margin-top: -55px;
 	/*text-align: center;*/
 }
@@ -34,6 +34,15 @@ body{
 	height: 38px;
 	background-color: white;
 	margin-top: -12px;
+	position: relative;
+}
+#text{
+	display: none;
+	width: 150px;
+	height: 35px;
+	margin-top: -12px;
+	margin-left: -153px;
+	position: absolute;
 }
 .seach:hover{
 	
@@ -61,34 +70,54 @@ body{
 	margin-left: 3px;
 }
 .li a{
-	margin-left: px;
+	/*margin-left: 8px;*/
 }
 .li2{
 	list-style: none;
 	float: left;
 	margin-left: 10px;
 }
+.li2 dl{
+	width: 820px;
+}
 .li2 a{
 	font-size: 18px;
-	margin-left: 40px;
+	font-weight: normal;
+	margin-left: 37px;
+	float: left;
+}
+.li2 a:hover{
+	color: red;
+	font-weight: bold;
+}
+.li2 dd a{
+	padding: 15px 15px;
+	font-size: 17px;
+	text-align: center;
+	color: white;
+	font-family: "微软雅黑";
+	font-weight: normal;
 }
 .ul2{
 	margin-left: 500px;
-	margin-top: 40px;
+	margin-top: 49px;
 	position: relative;
+	height: 40px;
 }
+.ul2 > li {
+	height: 40px;
+}
+
 .menu{
-	/*display: none;*/
 	width: 900px;
 	height: 136px;
 	float: left;
 	position: absolute;
-	margin-top: 19px;
-	/*right: 20px;*/
-	/*bottom: -6px;*/
+	right: 110px;
+	bottom: -126px;
 	background: url(../imger/download111.png) no-repeat;
-	padding: 0 6px;
 	z-index: 1000;
+	margin-left: -5px;
 }
 .menu a:hover{
 	color: red;
@@ -112,13 +141,21 @@ body{
 	left: 100px;
 	background: url(../imger/11.png) no-repeat left center;
 }
+#prev:hover{
+	left: 100px;
+	background: url(../imger/zuo.png) no-repeat left center;
+}
 #next{
 	right: 100px;
 	background: url(../imger/12.png) no-repeat right center;
 }
+#next:hover{
+	right: 100px;
+	background: url(../imger/you.png) no-repeat right center;
+}
 .arrow{
 	cursor: pointer;
-	display: none;
+	/*display: none;*/
 	line-height: 58px;
 	text-align: center;
 	width: 58px;
@@ -136,6 +173,8 @@ body{
 	/*align-items: baseline;*/
 }
 .icon1:hover{
+	background: url(../imger/download77.png) no-repeat;
+	/*color: red;*/
 	margin-top: -1px;
 	transition-duration: 0.1s;
 }
@@ -143,20 +182,25 @@ body{
 	background-color: red;
 }*/
 .icon1{
+	background: url(../imger/xin.png) no-repeat;
 	margin-bottom: -90px;
 }
 .icon2{
+	background: url(../imger/ban.png) no-repeat;
 	margin-bottom: -90px;
 	margin-left: 130px;
 }
 .icon2:hover{
+	background: url(../imger/download88.png) no-repeat;
 	margin-top: -1px;
 	transition-duration: 0.1s;
 }
 .icon3{
+	background: url(../imger/wei.png) no-repeat;
 	margin-left: 250px;
 }
 .icon3:hover{
+	background: url(../imger/download99.png) no-repeat;
 	margin-top: -1px;
 	transition-duration: 0.1s;
 }
@@ -195,8 +239,13 @@ body{
 	margin-left: 0px;
 	margin-top: -20px;
 }
-
-.db1{
+/*.db:hover{
+	background-color: white;
+}
+.db a:hover{
+	background-color: gray;
+}*/
+/*.db1{
 	width: 170px;
 	height: 75px;
 	float: left;
@@ -206,7 +255,7 @@ body{
 .db1 a{
 	color: black;
 	font-size: 20px;
-}
+}*/
 .db2{
 	float: left;
 	width: 400px;

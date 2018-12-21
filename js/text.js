@@ -1,4 +1,5 @@
-    <script type="text/javascript">
+
+         //二级菜单
 			$(function() {
 				hide(); /*DOM元素加载完就执行隐藏函数*/
 			});
@@ -14,7 +15,16 @@
 			);
 			$(".ul2 li").mouseleave(
 				function() {
-					hide(); /*鼠标离开后又隐藏*/
+					$(this).find(".menu").css("display", "none");
+					//hide(); /*鼠标离开后又隐藏*/
 				}
 			);
-		</script>
+			
+        //中间新闻点击事件
+            $(".bbstab a").click(function() {
+			$(".now").removeClass("now");
+			$(this).addClass("now");
+		    var index = $(".bbstab a").index($(this));
+			$(".center").css("display", "none");
+			$(".center:eq("+ index +")").css("display", "block");
+		    })

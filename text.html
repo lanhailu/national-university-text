@@ -11,14 +11,15 @@
 			<img src="imger/logo.png" class="tu"/>
 			<div class="leftTop">
 				<ul class="ul1">
-					<li class="li1"><a href="##">首页  &nbsp;</a><span style="color: white; font-size: 16px;">|</span></li>
-					<li class="li1"><a href="##"> &nbsp;学生  &nbsp;</a><span style="color: white; font-size: 16px;">|</span></li>
-					<li class="li1"><a href="##"> &nbsp;教职工 &nbsp;</a><span style="color: white; font-size: 16px;">|</span></li>
-					<li class="li1"><a href="##"> &nbsp;校友 &nbsp;</a><span style="color: white; font-size: 16px;">|</span></li>
+					<li class="li1"><a href="##">首页  &nbsp;</a><span style="color: white; font-size: 17px;">|</span></li>
+					<li class="li1"><a href="##"> &nbsp;学生  &nbsp;</a><span style="color: white; font-size: 17px;">|</span></li>
+					<li class="li1"><a href="##"> &nbsp;教职工 &nbsp;</a><span style="color: white; font-size: 17px;">|</span></li>
+					<li class="li1"><a href="##"> &nbsp;校友 &nbsp;</a><span style="color: white; font-size: 17px;">|</span></li>
 					<li class="li1"><a href="##"> &nbsp;English &nbsp;</a></li>
-					<li class="li1"><div class="qing" style="display: none;"><a>请输入</a></div><img class="seach" src="imger/seach.png"></li>
+					<li class="li1"><input type="text" name="INTEXT" placeholder="请输入" value="" id="text"><img class="seach" src="imger/seach.png"></li>
 				</ul><br />
-				<div class="ul2" id="bbstab">
+				<div class="ul2">
+					<!--二级菜单-->
 					<li class="li2">
 						<a href="##" class="now">学院概括</a>
 						<div class="menu">
@@ -118,30 +119,9 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
-		<!--<script type="text/javascript" src="js/text.js" ></script>-->
-		<script type="text/javascript">
-			$(function() {
-				hide(); /*DOM元素加载完就执行隐藏函数*/
-			});
 
-			function hide() {
-				$(".menu").css("display", "none"); /*隐藏函数，就是将二级菜单隐藏*/
-			}
-			/*以下是第二部分*/
-			$(".ul2 li").mouseenter(
-				function() {
-					$(this).find(".menu").css("display", "block"); /*鼠标移动到.t1 li上就执行显示函数*/
-				}
-			);
-			$(".ul2 li").mouseleave(
-				function() {
-					hide(); /*鼠标离开后又隐藏*/
-				}
-			);
-		</script>
-		<!--二级菜单-->
 		
+		<!--中间部分-->
 		<div id="banner" >
 			<div id="pic" style="height: 500px;">
 				<ul>
@@ -160,129 +140,34 @@
 				<a id="next" class="arrow" style="top: 231px;"></a>
 			</div>
 			<div class="icon">
-				<li><a class="icon1" href="##"><img src="imger/xin.png"></a></li>
-				<li><a class="icon2" href="##"><img src="imger/ban.png"></a></li>
-				<li><a class="icon3" href="##"><img src="imger/wei.png"></a></li>
+				<li><a class="icon1" href="##"><!--<img src="imger/xin.png">--></a></li>
+				<li><a class="icon2" href="##"><!--<img src="imger/ban.png">--></a></li>
+				<li><a class="icon3" href="##"><!--<img src="imger/wei.png">--></a></li>
 			</div>
 		</div>
-		<script type="text/javascript">
-			var prev = document.getElementById("prev");
-			var next = document.getElementById("next");
-			var imglist = document.getElementById("img");
-			var imgList = ['imger/1.jpg', 'imger/2.jpg', 'imger/3.jpg', 'imger/4.jpg', 'imger/5.jpg', 'imger/6.jpg', 'imger/7.jpg', 'imger/8.jpg','imger/9.jpg','imger/10.jpg'];
-			var num = 0;
-			function tab() {
-				imglist.src = imgList[num];
-			};
-			tab();
-			prev.onclick = function() {
-				num--;
-				if(num == -1) {
-					num = imgList.length - 1;
-				}
-				tab();
-			}
-			next.onclick = function() {
-				num++;
-				if(num == imgList.length) {
-					num = 0;
-				}
-				tab();
-			}
-			
-			var bannerList = [
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/1.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/2.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/3.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/4.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/5.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/6.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/7.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/8.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/9.jpg",
-            },
-            {
-      	    "linksrc":"http://sina.com",
-      	    "imgsrc":"imger/10.jpg",
-            }, 
-      ]
-      
-      var index = 0;
-      var links = document.getElementById("links");
-      var bannerimg = document.getElementById("img");
-      function changeImg (){
-      	if(index == 9){
-      		index = 0;
-      	}
-      	else{
-      		index = index + 1;
-      	}
-      	links.href = bannerList[index].linksrc;
-      	bannerimg.src = bannerList[index].imgsrc;
-      }
-      var intervalId = setInterval(changeImg,3000);
-      bannerimg.onmouseover = function(){
-      	clearInterval(intervalId);
-      }
-      bannerimg.onmouseout = function(){
-      	intervalId = setInterval(changeImg,3000);
-      }
-		</script>
+		
 		
 		<!--中间新闻部分-->
 		<div class="logo2">
 			<div class="top2">
-				<div class="db1"><a><img class="img3" src="imger/pic_fun_xyxw.gif"/>学院新闻</a></div>
+				<div class="bbstab">
+				<div class="db"><a><img class="img3" src="imger/pic_fun_xyxw.gif"/>学院新闻</a></div>
 				<div class="db"><a><img class="img3" src="imger/pic_fun_xbxw.gif"/>系部新闻</a></div>
 				<div class="db"><a><img class="img3" src="imger/pic_fun_mtgz.gif"/>媒体关注</a></div>
+				</div>
 				<div class="db2"><img class="img3" src="imger/qqq.png"/><a class="a1">通知公告&nbsp;&nbsp;</a><a class="a2">Announcements</a></div>
 			</div>
 			<div class="left">
 				<!--小轮播-->
 				<ul id="ul">
 				<li><a id="link"><img src="imger/03.jpg" class="left1" id="tupian">
-                <div id="title"><p>我院隆重举行民族团结进步“五个一”教...</p></div>
-				</a></li>
-				<li><a><img src="imger/02.jpg" class="left1" style="display: none;">					
-				<!--<div id="title"><p>我院举办的国际视野下TESOL理论与实践研...</p></div>-->
-				</a></li>
-				<li><a><img src="imger/01.jpg" class="left1" style="display: none;">
-			    <!--<div id="title"><p>我院武鸣新校区建设项目奠基开工仪式隆...</p></div>-->
-				</a></li>
-				<li><a><img src="imger/05.jpg" class="left1" style="display: none;">
-				<!--<div id="title"><p>我院教师参加学校召开贯彻全国教育大会...</p></div>-->
-				</a></li>
-				<li><a><img src="imger/04.jpg" class="left1" style="display: none;">
-				<!--<div id="title"><p>我院党委召开机关党员学习会</p></div>-->
-				</a></li>
-				
-				<div class="hd">
+                <div id="title"><p>我院隆重举行民族团结进步“五个一”教...</p></div></a></li>
+				<li><a><img src="imger/02.jpg" class="left1" style="display: none;"></a></li>
+				<li><a><img src="imger/01.jpg" class="left1" style="display: none;"></a></li>
+				<li><a><img src="imger/05.jpg" class="left1" style="display: none;"></a></li>
+				<li><a><img src="imger/04.jpg" class="left1" style="display: none;"></a></li>
+				</ul>
+				<div class="hd" id="hb">
 					<!--小白点-->
 				<a href="" class=""></a>
 				<a href="" class=""></a>
@@ -290,74 +175,8 @@
 				<a href="" class=""></a>
 				<a href="" class="active"></a>
 				</div>
-				</ul>
 			</div>
-			<script type="text/javascript">
-				var blist = [
-	            {
-		         newstitle: "我院隆重举行民族团结进步“五个一”教...",
-		         linkhref: "http://baidu.com",
-      	         imgsrc:"imger/03.jpg",
-		
-	            },
-	            {
-		        newstitle: "我院举办的国际视野下TESOL理论与实践研...",
-		        linkhref: "http://baidu.com",
-		        imgsrc:"imger/02.jpg",
-	            },
-	            {
-		        newstitle: "我院武鸣新校区建设项目奠基开工仪式隆...",
-		        linkhref: "http://baidu.com",
-		        imgsrc:"imger/01.jpg",
-	            },
-	            {
-	           	newstitle: "我院教师参加学校召开贯彻全国教育大会...",
-		        linkhref: "http://baidu.com",
-      	        imgsrc:"imger/05.jpg",
-		
-	            },
-	            {
-		        newstitle: "我院党委召开机关党员学习会",
-		        linkhref: "http://baidu.com",
-      	        imgsrc:"imger/04.jpg",
-		
-	            },
-                ]
-				var link = document.getElementById("link");
-				var tupian = document.getElementById("tupian");
-				var title =  document.getElementById("title"); 
-				var hb = document.getElementById("hb");
-				var a = document.getElementsByTagName("a")
-				
-				var indexs = 0;
-				function changeImgs (){
-      	        if(indexs == 4){
-      		    indexs = 0;
-      	        }
-      	        else{
-      		    indexs = indexs + 1;
-      	        }
-      	        link.href = blist[indexs].linkhref;
-      	        tupian.src = blist[indexs].imgsrc;
-      	        title.innerHTML = blist[indexs].newstitle;
-      	        for(var i = 0; i < a.length; i++) {
-        	    if(i == indexs) {
-        		hb[i].className = "active";
-        	    }
-        	    else {
-                hb[i].className = "";
-        	    }
-              }
-            }
-                var intervalId = setInterval(changeImgs,3000);
-                tupian.onmouseover = function(){
-      	        clearInterval(intervalId);
-                }
-                tupian.onmouseout = function(){
-      	        intervalId = setInterval(changeImgs,3000);
-                }
-				
-			</script>
+			
 			<!--中间新闻-->
 			<div class="center">
 				<!--学院新闻-->
@@ -374,31 +193,31 @@
 					<li><h3>12-13</h3><a class="font">我院隆重举行民族团结进步”五个一“...</a></li></br>
 				</ul>
 			</div>
-			<div class="center1" style="display: none;">
+			<div class="center" style="display: none;">
 				<!--系部新闻-->
 				<ul>
-					<li><h3>12-13</h3><a class="font">海虑太教授应邀给我院新闻信息中心记者作新闻写...</a></li></br>
-					<li><h3>12-13</h3><a class="font">【党总支活动】文化传播系全体党员大会顺利举行</a></li></br>
-					<li><h3>12-13</h3><a class="font">【党团建设】管理系党支部书记参加广西民族大学2...</a></li></br>
-					<li><h3>12-13</h3><a class="font">【党团建设】管理系2018年下半年党员发展对象党...</a></li></br>
-					<li><h3>12-13</h3><a class="font">【教学工作】管理系开展“自治区60周年大庆”节...</a></li></br>
-					<li><h3>12-13</h3><a class="font">【教学活动】管理系举办英语四级模拟考试"</a></li></br>
-					<li><h3>12-13</h3><a class="font">【学干培训】管理系学生会新闻部开展学干培训会"</a></li></br>
+					<li><h3>12-13</h3><a class="font">海虑太教授应邀给我院新闻信息中心记者...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【党总支活动】文化传播系全体党员大会</a></li></br>
+					<li><h3>12-13</h3><a class="font">【党团建设】管理系党支部书记参加广西...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【党团建设】管理系2018年下半年...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【教学工作】管理系开展“自治区60周年大...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【教学活动】管理系举办英语四级模拟考试</a></li></br>
+					<li><h3>12-13</h3><a class="font">【学干培训】管理系学生会新闻部开展学干..</a></li></br>
 					<li><h3>12-13</h3><a class="font">【教学活动】管理系2018级安全教育班会</a></li></br>
-					<li><h3>12-13</h3><a class="font">【学生活动】管理系2018年第二届“活力杯”篮球..</a></li></br>
-					<li><h3>12-13</h3><a class="font">【实践教学】管理系承办国际视野下TESOL教学与实...</a></li></br>
+					<li><h3>12-13</h3><a class="font">【学生活动】管理系2018年第二届“活力杯”..</a></li></br>
+					<li><h3>12-13</h3><a class="font">【实践教学】管理系承办国际视野下TESOL教学...</a></li></br>
 				</ul>
 			</div>
-			<div class="center1" style="display: none;">
+			<div class="center" style="display: none;">
 				<!--媒体关注-->
 				<ul>
 					<li><h3>12-13</h3><a class="font">广西民大相思湖学院：海外师生心向党</a></li></br>
 					<li><h3>12-13</h3><a class="font">校企携手共育大数据人才</a></li></br>
-					<li><h3>12-13</h3><a class="font">甲骨文校企合作助力高校应用转型发展校长论坛举行</a></li></br>
-					<li><h3>12-13</h3><a class="font">《圆梦中国 德耀中华》专题节目在广西高校引强烈...</a></li></br>
+					<li><h3>12-13</h3><a class="font">甲骨文校企合作助力高校应用转型...</a></li></br>
+					<li><h3>12-13</h3><a class="font">《圆梦中国 德耀中华》专题节目在广西高...</a></li></br>
 					<li><h3>12-13</h3><a class="font">校企携手共育大数据人才</a></li></br>
 					<li><h3>12-13</h3><a class="font">在海外讲好相思湖故事</a></li></br>
-					<li><h3>12-13</h3><a class="font">甲骨文校企合作助力高校应用转型发展校长论坛举行</a></li></br>
+					<li><h3>12-13</h3><a class="font">甲骨文校企合作助力高校应用转型发展..</a></li></br>
 					<li><h3>12-13</h3><a class="font">校企携手共育大数据人才</a></li></br>
 					<li><h3>12-13</h3><a class="font">脱“影”而出 唱响改革强校之歌</a></li></br>
 					<li><h3>12-13</h3><a class="font">广西民族大学相思湖学院校刊校报(2017年第一期)</a></li></br>
@@ -445,23 +264,7 @@
 			 </div>
 			</div>
 			
-			<script type="text/javascript">
-	            var speed=80;
-	         	var FGDemo = document.getElementById("demo");
-	         	var FGDemo1 = document.getElementById("demo1");
-	         	var FGDemo2 = document.getElementById("demo2");
-	            FGDemo2.innerHTML = FGDemo1.innerHTML
-	         	     function Marquee1(){
-	         	    	 if(FGDemo2.offsetHeight-FGDemo.scrollTop<=0){
-	         	    		FGDemo.scrollTop-=FGDemo1.offsetHeight
-	         	    	 }else{
-	         	    		FGDemo.scrollTop++
-	         	    	    }
-	         	    	}
-	         	    	var MyMar1 = setInterval(Marquee1,speed)
-	         	    	FGDemo.onmouseover = function(){clearInterval(MyMar1)}
-	         	    	FGDemo.onmouseout = function(){MyMar1=setInterval(Marquee1,speed)}
-	         	    </script>
+			
 			
 			<!--中间横幅-->
 			<div id="hengfu">
@@ -724,5 +527,186 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+	<script type="text/javascript" src="js/text.js" >//二级菜单</script>
+	<script type="text/javascript">
+		//大图轮播
+			var prev = document.getElementById("prev");
+			var next = document.getElementById("next");
+			var imglist = document.getElementById("img");
+			var imgList = ['imger/1.jpg', 'imger/2.jpg', 'imger/3.jpg', 'imger/4.jpg', 'imger/5.jpg', 'imger/6.jpg', 'imger/7.jpg', 'imger/8.jpg','imger/9.jpg','imger/10.jpg'];
+			var num = 0;
+			function tab() {
+				imglist.src = imgList[num];
+			};
+			tab();
+			prev.onclick = function() {
+				num--;
+				if(num == -1) {
+					num = imgList.length - 1;
+				}
+				tab();
+			}
+			next.onclick = function() {
+				num++;
+				if(num == imgList.length) {
+					num = 0;
+				}
+				tab();
+			}
+			
+			var bannerList = [
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/1.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/2.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/3.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/4.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/5.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/6.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/7.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/8.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/9.jpg",
+            },
+            {
+      	    "linksrc":"http://sina.com",
+      	    "imgsrc":"imger/10.jpg",
+            }, 
+      ]
+      
+            var index = 0;
+            var links = document.getElementById("links");
+            var bannerimg = document.getElementById("img");
+            function changeImg (){
+      	if(index == 9){
+      		index = 0;
+      	}
+      	else{
+      		index = index + 1;
+      	}
+      	links.href = bannerList[index].linksrc;
+      	bannerimg.src = bannerList[index].imgsrc;
+      }
+            var intervalId = setInterval(changeImg,3000);
+            bannerimg.onmouseover = function(){
+      	clearInterval(intervalId);
+      }
+            bannerimg.onmouseout = function(){
+      	intervalId = setInterval(changeImg,3000);
+      }
+		
+		//右边新闻自己动
+	        var speed=80;
+	        var FGDemo = document.getElementById("demo");
+	        var FGDemo1 = document.getElementById("demo1");
+	        var FGDemo2 = document.getElementById("demo2");
+	        FGDemo2.innerHTML = FGDemo1.innerHTML
+	         	function Marquee1(){
+	         	    if(FGDemo2.offsetHeight-FGDemo.scrollTop<=0){
+	         	    	FGDemo.scrollTop-=FGDemo1.offsetHeight
+	         	    }else{
+	         	    	FGDemo.scrollTop++
+	         	         }
+	         	    }
+	         	    var MyMar1 = setInterval(Marquee1,speed)
+	         	    FGDemo.onmouseover = function(){clearInterval(MyMar1)}
+	         	    FGDemo.onmouseout = function(){MyMar1=setInterval(Marquee1,speed)}
+	         	   
+		    //小轮播 
+		
+			var blist = [
+	            {
+		         newstitle: "我院隆重举行民族团结进步“五个一”教...",
+		         linkhref: "http://baidu.com",
+      	         imgsrc:"imger/03.jpg",
+		
+	            },
+	            {
+		        newstitle: "我院举办的国际视野下TESOL理论与实践研...",
+		        linkhref: "http://baidu.com",
+		        imgsrc:"imger/02.jpg",
+	            },
+	            {
+		        newstitle: "我院武鸣新校区建设项目奠基开工仪式隆...",
+		        linkhref: "http://baidu.com",
+		        imgsrc:"imger/01.jpg",
+	            },
+	            {
+	           	newstitle: "我院教师参加学校召开贯彻全国教育大会...",
+		        linkhref: "http://baidu.com",
+      	        imgsrc:"imger/05.jpg",
+	            },
+	            {
+		        newstitle: "我院党委召开机关党员学习会",
+		        linkhref: "http://baidu.com",
+      	        imgsrc:"imger/04.jpg",
+	            },
+                ]
+			var link = document.getElementById("link");
+			var tupian = document.getElementById("tupian");
+			var title =  document.getElementById("title"); 
+			var hb = document.getElementById("hb");
+			var a = document.getElementsByTagName("a")
+			var indexs = 0;
+			function changeImgs (){
+      	        if(indexs == 4){
+      		    indexs = 0;
+      	        }
+      	        else{
+      		    indexs = indexs + 1;
+      	        }
+      	        link.href = blist[indexs].linkhref;
+      	        tupian.src = blist[indexs].imgsrc;
+      	        title.innerHTML = blist[indexs].newstitle;
+//    	        for(var i = 0; i < a.length; i++) {
+//      	    if(i == indexs) {
+//      		hb[i].className = "active";
+//      	    }
+//      	    else {
+//              hb[i].className = "";
+//      	    }
+//            }
+            }
+            var intervalId = setInterval(changeImgs,3000);
+            tupian.onmouseover = function(){
+      	    clearInterval(intervalId);
+            }
+            tupian.onmouseout = function(){
+      	    intervalId = setInterval(changeImgs,3000);
+            }
+			
+			//搜索框
+			$(".seach").mouseover(function(){
+//          $("#text").show();
+			$("#text").slideDown("fast");
+		    }).mouseout(function(){
+			$("#text").hide();
+		    })
+			
+	</script>
 </html>
 
