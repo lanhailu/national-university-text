@@ -239,6 +239,20 @@ body{
 	margin-left: 0px;
 	margin-top: -20px;
 }
+.db:hover{
+	width: 170px;
+	height: 75px;
+	float: left;
+	margin-left: 5px;
+	background: white;
+	border-radius: 5px;
+}
+.db a:hover{
+	color: gray;
+	font-size: 20px;
+	margin-left: 0px;
+	margin-top: -20px;
+}
 /*.db:hover{
 	background-color: white;
 }
